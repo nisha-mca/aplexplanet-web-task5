@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CareerHub responsive job portal - ApexPlanet Task 5">
+  <title>CareerHub | Job Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <a href="#home" class="logo">Career<span>Hub</span></a>
+    <button id="menuBtn" class="menu-btn">☰</button>
+    <div id="navLinks" class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#jobs">Jobs</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button id="savedBtn" class="saved-btn">♡ Saved <span id="savedCount">0</span></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">FIND YOUR NEXT OPPORTUNITY</p>
+    <h1>Build your career with the right job.</h1>
+    <p>Search internships and jobs, filter opportunities, save your favorites and apply through a simple responsive interface.</p>
+    <a href="#jobs" class="primary">Explore Jobs</a>
+  </div>
+  <div class="hero-card">
+    <div class="hero-icon">💼</div>
+    <h3>10+ opportunities</h3>
+    <p>Technology, design, marketing and business roles.</p>
+  </div>
+</section>
+
+<section class="section" id="jobs">
+  <div class="section-title">
+    <div>
+      <p class="eyebrow">LATEST OPENINGS</p>
+      <h2>Find a job that fits you</h2>
+    </div>
+    <p id="resultText" class="muted"></p>
+  </div>
+
+  <div class="filters">
+    <input id="searchInput" type="search" placeholder="Search job title or company">
+    <select id="locationFilter">
+      <option value="all">All locations</option>
+      <option>Chennai</option>
+      <option>Coimbatore</option>
+      <option>Trichy</option>
+      <option>Bengaluru</option>
+      <option>Remote</option>
+    </select>
+    <select id="typeFilter">
+      <option value="all">All job types</option>
+      <option>Full-time</option>
+      <option>Internship</option>
+    </select>
+    <select id="sortFilter">
+      <option value="default">Sort by</option>
+      <option value="salaryHigh">Salary: High to Low</option>
+      <option value="salaryLow">Salary: Low to High</option>
+      <option value="company">Company A-Z</option>
+    </select>
+  </div>
+
+  <div id="jobGrid" class="job-grid"></div>
+  <div id="emptyState" class="empty" hidden>No matching jobs found. Try changing your filters.</div>
+</section>
+
+<section class="stats">
+  <div><strong>10+</strong><span>Open Roles</span></div>
+  <div><strong>5</strong><span>Locations</span></div>
+  <div><strong>100%</strong><span>Responsive</span></div>
+  <div><strong>24/7</strong><span>Access</span></div>
+</section>
+
+<section class="section about" id="about">
+  <div class="about-card">
+    <div class="about-icon">🚀</div>
+    <div>
+      <p class="eyebrow">ABOUT THIS PROJECT</p>
+      <h2>Simple, fast and responsive job search</h2>
+      <p>CareerHub is an ApexPlanet Task 5 capstone project built only with HTML, CSS and vanilla JavaScript. It demonstrates dynamic content, filtering, sorting, saved jobs, modal interaction, LocalStorage and responsive design.</p>
+      <div class="checks">
+        <span>✓ Dynamic job cards</span>
+        <span>✓ Search and filters</span>
+        <span>✓ Saved jobs with LocalStorage</span>
+        <span>✓ Mobile responsive layout</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="contact-box">
+    <div>
+      <p class="eyebrow">CONTACT</p>
+      <h2>Have a question?</h2>
+      <p class="muted">Send us a message using the form.</p>
+    </div>
+    <form id="contactForm">
+      <input id="contactName" required placeholder="Your name">
+      <input id="contactEmail" type="email" required placeholder="Email address">
+      <textarea id="contactMessage" required rows="4" placeholder="Your message"></textarea>
+      <button class="primary" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <button id="closeModal" class="close">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+
+<footer>© 2026 CareerHub • ApexPlanet Task 5 • HTML + CSS + JavaScript</footer>
+<script src="script.js" defer></script>
+</body>
+</html>
